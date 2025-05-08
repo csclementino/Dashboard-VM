@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1C1C1C;
+    color: white;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    position: fixed;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw;  /* Ocupa toda a largura da tela */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00A7A7;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 91px 91px 0px;
+  }
+
+  .sidebar-header {
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+    justify-content: center; /* opcional, centraliza verticalmente se tiver altura */
+    text-align: center;      /* alinha o texto ao centro */
+  }
+
+  .sidebar-header img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .sidebar-header h1{
+    font-family: 'XXII Geom';
+    font-style: bold;
+    font-size: 23px;
+    margin-bottom: 0;
+  }
+
+  .sidebar-header p{
+    margin-top: 2px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;    /* normal = regular */
+    font-weight: 400;      /* 400 = regular */
+    font-size: 15px;
+  }
+
+  .sidebar-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .sidebar-footer img{
+    width: 40px;
+    height: 40px;
+  }
+ 
+  .card-nav img{
+    height: 45px;
+    width: 45px;
+    margin-right: 15px;
+  }
+
+  .card-nav {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .card-nav.active {
+    background-color: #444; 
+  }
+
+  .card-nav a{
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    padding: 0;
+    width: 70%;
+    height: 85%;
+
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .card-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .info-card1{
+    width: 400px;
+    height: 100%;
+    background: #333433;
+    border-radius: 20px 20px 48px 20px;
+    box-shadow: 7px 9px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .info-card1 h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  .info-text{
+    width: 100%; 
+    height: 80%;
+    justify-items: center; 
+    align-content: center;
+  }
+
+  .info-text h2{
+    font-family: 'Room';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+  }
+
+  .info-text h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .info-text h2,
+  .info-text h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .info-card4{
+    float: right;
+    width: 400px;
+    height: 100%;
+    background: #333433;
+    border-radius: 20px 20px 48px 20px;
+    box-shadow: 7px 9px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .info-card4 h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  .info-card2{
+    width: 500px;
+    height: 80%;
+    background: #333433;
+    border-radius: 20px 20px 48px 20px;
+    box-shadow: 7px 9px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .info-content h2{
+    font-family: 'Room';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+  }
+  .info-card2 h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  .info-content{
+    display: flex;
+    height: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .info-content img{
+    height: 95px;
+    width: 95px;
+  }
+
+  .info-content h2{
+    font-family: 'Quache';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 103px;
+  }
+
+  .info-content2{
+    display: flex;
+    height: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .info-content2 h2{
+    font-family: 'Quache';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 103px;
+  }
+  .info-content2 img{
+    height: 110px;
+    width: 110px;
+  }
+

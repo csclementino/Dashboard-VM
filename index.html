@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/estilos/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Reportes</title>
+</head>
+<body>
+<div class="wrapper">    
+    <nav class="sidebar">
+        <!-- Aqui você pode colocar os ícones com <img> ou <i class="icon"> -->
+        <div class="sidebar-header">
+            <img src="/images/Linha_Lilas_Viamobilidade.png" alt="imagem via">
+            <h1>ViaMobilidade</h1>
+            <p>CCO Osasco</p>
+        </div>
+        <div class="sidebar-body">
+          <div class="card-nav">
+              <img src="/images/pie-chart.png">
+              <a href="overview.html">Overview</a>
+          </div>
+          <div class="card-nav">
+            <img src="/images/megaphone.png">
+            <a href="reportes.html">Reportes</a>
+          </div>
+          <div class="card-nav">
+            <img src="/images/history.png">
+            <a href="#">Histórico</a>
+          </div>
+        </div>
+        <div class="sidebar-footer">
+          <a href="#">
+            <img src="/images/exit.png">
+          </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h2>Lista de reportes pendentes</h2>
+            <button class="btn-atualizar" onclick="carregarReportes()">🔄 ATUALIZAR REPORTES</button>
+        </div>
+
+        <div class="table-header">
+            <div>TIPO DE REPORTE</div>
+            <div>LINHA</div>
+            <div>ESTAÇÃO</div>
+            <div>DATA</div>
+        </div>
+
+        <div id="lista-reportes">
+            <!-- Linhas adicionadas dinamicamente -->
+        </div>
+    </div>
+</div>
+<script>
+  // Simulação de resposta de API
+  const dadosDaAPI = [
+    { tipo: "Vendedor Ilegal", linha: "9 ESMERALDA", estacao: "PAL", data: "06/05/2025 10:15" },
+    { tipo: "Assédio", linha: "8 DIAMANTE", estacao: "OSA", data: "06/05/2025 10:10" },
+    { tipo: "Racismo", linha: "8 DIAMANTE", estacao: "QTU", data: "06/05/2025 10:09" },
+    { tipo: "Violência", linha: "9 ESMERALDA", estacao: "CEA", data: "06/05/2025 10:00" },
+    { tipo: "Roubo", linha: "9 ESMERALDA", estacao: "OSA", data: "06/05/2025 09:50" },
+    { tipo: "Vandalismo", linha: "8 DIAMANTE", estacao: "JPR", data: "06/05/2025 09:49" }
+  ];
+
+  function carregarReportes() {
+    const container = document.getElementById("lista-reportes");
+    container.innerHTML = ""; // Limpa o conteúdo anterior
+
+    dadosDaAPI.forEach(reporte => {
+      const linhaClasse = reporte.linha.includes("ESMERALDA") ? "esmeralda" : "diamante";
+
+      const row = document.createElement("div");
+      row.classList.add("row");
+      row.innerHTML = `
+        <div>${reporte.tipo}</div>
+        <div><span class="linha ${linhaClasse}">${reporte.linha}</span></div>
+        <div>${reporte.estacao}</div>
+        <div>${reporte.data}</div>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  // Carrega ao iniciar
+  carregarReportes();
+</script>
+
+</body>
+</html>
