@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1C1C1C;
+    color: white;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    position: fixed;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 100vw;  /* Ocupa toda a largura da tela */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00A7A7;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 91px 91px 0px;
+  }
+
+  .sidebar-header {
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+    justify-content: center; /* opcional, centraliza verticalmente se tiver altura */
+    text-align: center;      /* alinha o texto ao centro */
+  }
+
+  .sidebar-header img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .sidebar-header h1{
+    font-family: 'XXII Geom';
+    font-style: bold;
+    font-size: 23px;
+    margin-bottom: 0;
+  }
+
+  .sidebar-header p{
+    margin-top: 2px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;    /* normal = regular */
+    font-weight: 400;      /* 400 = regular */
+    font-size: 15px;
+  }
+
+  .sidebar-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .sidebar-footer img{
+    width: 40px;
+    height: 40px;
+  }
+ 
+  .card-nav img{
+    height: 45px;
+    width: 45px;
+    margin-right: 15px;
+  }
+
+  .card-nav {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .card-nav.active {
+    background-color: #626262; 
+  }
+
+  .card-nav a{
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    padding: 0;
+    width: 70%;
+    height: 85%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  .header h2 {
+    margin: 0;
+    font-family: 'Quache';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+  }
+
+  .table-header, .row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    padding: 10px 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .row{
+    margin: 0;
+    margin-bottom: 22px;
+    background: #343333;
+    border-radius: 15px;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .table-header {
+    margin-top: 5px;
+    font-family: 'Room';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #A9A9A9;
+    margin-bottom: 15px;
+  }
+
+  .linha {
+    height: 40px;
+    width: 160px;
+    margin: 0;
+    border-radius: 15px;
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+  }
+
+  .esmeralda {
+    background-color: #009C97;
+    color: white;
+  }
+
+  .diamante {
+    background-color: #818181;
+    color: white;
+  }
+
+  
