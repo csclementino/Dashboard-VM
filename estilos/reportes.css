@@ -12,6 +12,7 @@ body {
     width: 100vw;  /* Ocupa toda a largura da tela */
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
   }
 
   .sidebar {
@@ -102,7 +103,7 @@ body {
     border-radius: 10px;
   }
   .card-nav.active {
-    background-color: #444; 
+    background-color: #626262; 
   }
 
   .card-nav a{
@@ -124,7 +125,6 @@ body {
     padding: 0;
     width: 70%;
     height: 85%;
-    background-color: #00A7A7;
   }
 
   .header {
@@ -136,48 +136,97 @@ body {
 
   .header h2 {
     margin: 0;
+    font-family: 'Quache';
+    font-style: normal;
+    font-weight: 900;
     font-size: 20px;
+    color: white;
   }
 
   .btn-atualizar {
-    background-color: #00c2cb;
+    background-color: #009C97;
     color: white;
     padding: 8px 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    width: 200px;
+    height: 65px;
+  }
+
+  .btn-atualizar img{
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-atualizar h2{
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
   }
 
   .table-header, .row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
     padding: 10px 0;
-    border-bottom: 1px solid #333;
     align-items: center;
+    text-align: center;
+  }
+
+  .row{
+    margin: 0;
+    margin-bottom: 22px;
+    background: #343333;
+    border-radius: 15px;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
   }
 
   .table-header {
-    font-weight: bold;
-    color: #ccc;
-    border-bottom: 2px solid #333;
+    margin-top: 5px;
+    font-family: 'Room';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #A9A9A9;
+    margin-bottom: 15px;
   }
 
   .linha {
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
+    height: 40px;
+    width: 160px;
+    margin: 0;
+    border-radius: 15px;
+    font-family: 'XXII Geom';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
     display: inline-block;
+    text-align: center;
+    align-content: center;
   }
 
   .esmeralda {
-    background-color: #00c2cb;
+    background-color: #009C97;
     color: white;
   }
 
   .diamante {
-    background-color: #777;
+    background-color: #818181;
     color: white;
   }
 
