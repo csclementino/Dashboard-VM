@@ -83,3 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+const cores = ['#009C97', '#DBA217', '#9870CB']; // azul, vermelho, verde
+
+// Recupera índice salvo ou usa 0 como padrão
+let indiceCor = parseInt(localStorage.getItem('corIndex')) || 0;
+
+// Aplica cor inicial ao carregar a página
+document.documentElement.style.setProperty('--cor-dinamica', cores[indiceCor]);
+
+function mudarCor() {
+  indiceCor = (indiceCor + 1) % cores.length;
+  document.documentElement.style.setProperty('--cor-dinamica', cores[indiceCor]);
+  localStorage.setItem('corIndex', indiceCor); // Salva no localStorage
+}
