@@ -5,17 +5,22 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/estilos/reportes.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Reportes</title>
+  <title>Reportes</title>
 </head>
 <body>
+  <script>
+  if (sessionStorage.getItem('logado') !== 'true') {
+    window.location.href = 'index.html';
+  }
+  </script>
+  <script src="/js/reportes-cache.js"></script>
 <div class="wrapper">    
     <nav class="sidebar">
         <!-- Aqui você pode colocar os ícones com <img> ou <i class="icon"> -->
         <div class="sidebar-header">
             <img src="/images/Linha_Lilas_Viamobilidade.png" alt="imagem via">
             <h1>ViaMobilidade</h1>
-            <p>CCO Osasco</p>
-            <button onclick="mudarCor()">Mudar cor</button>
+            <p id="ccoText"> </p>
         </div>
         <div class="sidebar-body">
           <div class="card-nav" id="nav-overview">
@@ -32,15 +37,15 @@
           </div>
         </div>
         <div class="sidebar-footer">
-          <a href="index.html">
-            <img src="/images/exit.png">
+          <a href="#" id="btn-sair">
+            <img src="/images/exit.png" alt="Sair">
           </a>
         </div>
     </nav>
     <div class="container">
         <div class="header">
             <h2>Lista de reportes pendentes</h2>
-            <button class="btn-atualizar" onclick="carregarReportes()">
+            <button class="btn-atualizar" onclick="atualizarReportes()">
               <img src="/images/refresh.png">
               <h2>ATUALIZAR<br>REPORTES</h2>
             </button>

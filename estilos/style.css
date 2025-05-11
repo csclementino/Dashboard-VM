@@ -11,6 +11,10 @@ body, html {
 
 }
 
+#username::placeholder,
+#password::placeholder {
+  color: rgb(182, 182, 182);
+}
 
 .container::before {
   content: "";
@@ -90,6 +94,15 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important; /* cor do texto */
+  box-shadow: 0 0 0px 1000px transparent inset !important; /* cor de fundo "dentro" do input */
+  transition: background-color 9999s ease-in-out 0s !important;
+  font-size: 20px !important;
 }
 
 .button-send{

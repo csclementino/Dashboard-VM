@@ -31,3 +31,42 @@
   
     // Carrega ao iniciar
     carregarReportes();
+
+
+
+
+    function carregarReportes() {
+    const container = document.getElementById("lista-reportes");
+    if (!container) return;
+
+    // Limpa o conteúdo existente
+    container.innerHTML = "";
+
+    // Fazendo a requisição à API
+    fetch('URL_DA_SUA_API')  // Substitua 'URL_DA_SUA_API' pelo endpoint correto da sua API
+        .then(response => response.json())
+        .then(dadosDaAPI => {
+            // Itera sobre os dados recebidos da API
+            dadosDaAPI.forEach((reporte, index) => {
+                const row = document.createElement("div");
+                row.classList.add("row");
+                row.innerHTML = `
+                    <div>${reporte.tipo}</div>
+                    <div><span class="linha">${reporte.linha}</span></div>
+                    <div>${reporte.estacao}</div>
+                    <div>${reporte.data}</div>
+                `;
+
+                // Ação ao clicar em um item da lista
+                row.onclick = () => {
+                    localStorage.setItem("reporteSelecionado", JSON.stringify(reporte));
+                    window.location.href = "detalhes.html";
+                };
+
+                container.appendChild(row);
+            });
+        })
+        .catch(error => {
+            console.error("Erro ao carregar os dados da API:", error);
+        });
+}

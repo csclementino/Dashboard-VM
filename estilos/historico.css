@@ -189,16 +189,7 @@ body {
     display: inline-block;
     text-align: center;
     align-content: center;
-  }
-
-  .esmeralda {
     background-color: var(--cor-dinamica);
     color: white;
   }
-
-  .diamante {
-    background-color: #818181;
-    color: white;
-  }
-
   
