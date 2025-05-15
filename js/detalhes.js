@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function marcarComoNaoAnalisado() {
   const reporteSelecionado = JSON.parse(localStorage.getItem("reporteSelecionado"));
-
   const id = reporteSelecionado.id_reporte;
   const endpoint = `http://127.0.0.1:8000/api/admin/reportes/analisar`;
 

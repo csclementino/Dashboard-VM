@@ -1,26 +1,5 @@
 
 
-// Exibe os detalhes (em detalhes.html)
-function mostrarDetalhes() {
-  const container = document.getElementById("detalhes-reporte");
-  if (!container) return;
-
-  const reporte = JSON.parse(localStorage.getItem("reporteSelecionado"));
-  if (!reporte) {
-    container.innerHTML = "<p>Reporte não encontrado.</p>";
-    return;
-  }
-
-  const linhaClasse = reporte.linha.includes("ESMERALDA") ? "esmeralda" : "diamante";
-
-  container.innerHTML = `
-    <p><strong>Tipo:</strong> ${reporte.tipo}</p>
-    <p><strong>Linha:</strong> <span class="linha ${linhaClasse}">${reporte.linha}</span></p>
-    <p><strong>Estação:</strong> ${reporte.estacao}</p>
-    <p><strong>Data:</strong> ${reporte.data}</p>
-  `;
-}
-
 // Voltar para a página inicial
 function voltar() {
   window.location.href = "reportes.html";

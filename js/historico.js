@@ -21,7 +21,6 @@ function carregarReportes() {
 function exibirReportes(dadosDaAPI) {
   const container = document.getElementById("lista-reportes");
   container.innerHTML = "";
-
   dadosDaAPI.dados_reportes.forEach((reporte) => {
     const row = document.createElement("div");
     row.classList.add("row");
@@ -35,5 +34,3 @@ function exibirReportes(dadosDaAPI) {
     container.appendChild(row);
   });
 }
-
-carregarReportes()

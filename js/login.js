@@ -1,12 +1,11 @@
 
 document.querySelector('form').addEventListener('submit', async function(e) {
-e.preventDefault(); // Impede o comportamento padrão do formulário
+e.preventDefault(); 
 
 const username = document.getElementById('username').value.trim();
 const password = document.getElementById('password').value.trim();
-
-// Remove mensagens de erro antigas, se houver
 let erroDiv = document.getElementById('erro-login');
+
 if (erroDiv) erroDiv.remove();
 
 try {
