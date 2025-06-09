@@ -9,7 +9,7 @@ let erroDiv = document.getElementById('erro-login');
 if (erroDiv) erroDiv.remove();
 
 try {
-    const resposta = await fetch('http://127.0.0.1:8000/api/admin', {
+    const resposta = await fetch('https://viamobility-backend-dzb8a3hterh6d2ce.brazilsouth-01.azurewebsites.net/api/admin', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
