@@ -14,7 +14,7 @@ function carregarReportes() {
     const dadosDaAPI = JSON.parse(cache);
     exibirReportes(dadosDaAPI);
   } else {
-    fetch(`http://127.0.0.1:8000/api/admin/reportes/line/${idCco}`) 
+    fetch(`https://viamobility-backend-dzb8a3hterh6d2ce.brazilsouth-01.azurewebsites.net/api/admin/reportes/line/${idCco}`) 
       .then(response => response.json())
       .then(dadosDaAPI => {
           sessionStorage.setItem("reportesCache", JSON.stringify(dadosDaAPI));
