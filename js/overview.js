@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function carregarOverview() {
   const idCco = sessionStorage.getItem('id_cco');
   if (!idCco) return;
-  fetch(`http://127.0.0.1:8000/api/admin/overview/line/${idCco}`) 
+  fetch(`https://viamobility-backend-dzb8a3hterh6d2ce.brazilsouth-01.azurewebsites.net/api/admin/overview/line/${idCco}`) 
     .then(response => response.json())
     .then(dados => {
       document.getElementById("campo_solucinados").textContent = dados.overview.solucionados;
