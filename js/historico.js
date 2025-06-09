@@ -7,7 +7,7 @@ function carregarReportes() {
   const idCco = sessionStorage.getItem('id_cco');
   if (!container || !idCco) return;
   container.innerHTML = "";
-    fetch(`http://127.0.0.1:8000/api/admin/historico/line/${idCco}`) 
+    fetch(`https://viamobility-backend-dzb8a3hterh6d2ce.brazilsouth-01.azurewebsites.net/api/admin/historico/line/${idCco}`) 
         .then(response => response.json())
         .then(dadosDaAPI => {
             exibirReportes(dadosDaAPI);
