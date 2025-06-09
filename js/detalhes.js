@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(reporteSelecionado);
 
   const id = reporteSelecionado.id_reporte;
-  const endpoint = `http://127.0.0.1:8000/api/admin/reportes/${id}`;
+  const endpoint = `https://viamobility-backend-dzb8a3hterh6d2ce.brazilsouth-01.azurewebsites.net/api/admin/reportes/${id}`;
 
   fetch(endpoint)
     .then(response => {
