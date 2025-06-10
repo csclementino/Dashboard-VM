@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function marcarComoNaoAnalisado() {
   const reporteSelecionado = JSON.parse(localStorage.getItem("reporteSelecionado"));
   const id = reporteSelecionado.id_reporte;
-  const endpoint = `http://127.0.0.1:8000/api/admin/reportes/analisar`;
+  const endpoint = `https://viamobility-backend-dzb8a3hterh6d2ce.brazilsouth-01.azurewebsites.net/api/admin/reportes/analisar`;
 
   const dadosParaAtualizar = {
     id_reporte: id,
